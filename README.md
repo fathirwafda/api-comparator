@@ -1,6 +1,9 @@
 # api-comparator
 This repository contains automated tests for comparing the endpoints API using Mocha and Chai.
 
+## Pre-Requisites
+Node.js v14.0.0 or newer
+
 ## Table of Contents
 1. [Getting Started](#getting-started)
 2. [Folder Structure](#folder-structure)

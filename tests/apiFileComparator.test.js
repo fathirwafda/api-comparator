@@ -3,7 +3,7 @@ const expect = chai.expect;
 const {Comparator} = require('../src/fileComparator');
 
 
-describe('Comparator Library', function() {
+describe('API Comparator for mass data', function() {
     // this.timeout(10000); // Setting higher timeout since we're making actual HTTP requests
 
     it('should compare responses correctly', async function() {

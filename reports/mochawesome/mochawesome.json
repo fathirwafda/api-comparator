@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2023-10-28T10:24:46.725Z",
-    "end": "2023-10-28T10:24:54.287Z",
-    "duration": 7562,
+    "start": "2023-10-28T15:02:55.162Z",
+    "end": "2023-10-28T15:03:00.394Z",
+    "duration": 5232,
     "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "175fa4f8-96ad-4646-8ecf-2262aab1e80c",
+    "uuid": "34982d2f-e3b6-4e49-92d6-0d1925c301f6",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "1c765195-7864-49df-b74a-d14dba73f370",
+        "uuid": "ba39f083-229b-4ab9-a502-9d72e0cdf5f9",
         "title": "API Comparator Tests",
         "fullFile": "/Users/fathirwafda/project/interview/allofresh/api-comparator/tests/apiComparator.test.js",
         "file": "/tests/apiComparator.test.js",
@@ -39,7 +39,7 @@
             "title": "should return true for equal responses",
             "fullTitle": "API Comparator Tests should return true for equal responses",
             "timedOut": false,
-            "duration": 600,
+            "duration": 537,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -48,7 +48,7 @@
             "code": "// Here we're assuming that the requests are to the same URLs set up in the mocks\nconst response1 = await chai.request('https://reqres.in').get('/api/users/3');\nconst response2 = await chai.request('https://reqres.in').get('/api/users/3');\nexpect(response1.status).to.equal(response2.status);\nexpect(response1.body).to.deep.equal(response2.body);",
             "err": {},
             "isRoot": false,
-            "uuid": "c5a5d2c9-941a-497d-8b72-c11fba1cb3dc",
+            "uuid": "be7c0b9c-7544-4114-836b-95f4effadc8d",
             "isHook": false,
             "skipped": false
           },
@@ -56,7 +56,7 @@
             "title": "should detect when responses are not equal",
             "fullTitle": "API Comparator Tests should detect when responses are not equal",
             "timedOut": false,
-            "duration": 311,
+            "duration": 890,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -65,7 +65,7 @@
             "code": "const response1 = await chai.request('https://reqres.in').get('/api/users/3');\n    const response2 = await chai.request('https://reqres.in').get('/api/users/4');\n    expect(response1.body).to.not.deep.equal(response2.body);",
             "err": {},
             "isRoot": false,
-            "uuid": "5b2b9624-1b24-4248-9bed-29bad83e3e0d",
+            "uuid": "1200186c-a320-4d2f-b918-0c6374139c35",
             "isHook": false,
             "skipped": false
           },
@@ -73,7 +73,7 @@
             "title": "should handle cases where one API fails",
             "fullTitle": "API Comparator Tests should handle cases where one API fails",
             "timedOut": false,
-            "duration": 2067,
+            "duration": 1024,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -82,28 +82,28 @@
             "code": "const response1 = await chai.request('https://reqres.in').get('/api/users/3');\n    const response2 = await chai.request('https://reqres.in').get('/api/users/3000000');\n    // Try-catch is necessary to handle the error thrown for the bad response\n    try {\n      // If the response was bad, we shouldn't hit this line\n      throw new Error('Expected an error for the second request, but got none.');\n    } catch (error) {\n      // We expect an error here, so in the catch block, we confirm it's for the right reasons\n      expect(response1.status).to.equal(200)\n      expect(response2.status).to.equal(404); // Confirm it's the error we're expecting\n    }",
             "err": {},
             "isRoot": false,
-            "uuid": "23837a42-e2e0-4aea-9e0c-5f9e19605a21",
+            "uuid": "c70a90cd-55ee-4167-9968-a93f5d69d75c",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "c5a5d2c9-941a-497d-8b72-c11fba1cb3dc",
-          "5b2b9624-1b24-4248-9bed-29bad83e3e0d",
-          "23837a42-e2e0-4aea-9e0c-5f9e19605a21"
+          "be7c0b9c-7544-4114-836b-95f4effadc8d",
+          "1200186c-a320-4d2f-b918-0c6374139c35",
+          "c70a90cd-55ee-4167-9968-a93f5d69d75c"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 2978,
+        "duration": 2451,
         "root": false,
         "rootEmpty": false,
         "_timeout": 180000
       },
       {
-        "uuid": "c6c771cd-03e2-46e3-9b80-bef2a15a8dde",
-        "title": "Comparator Library",
+        "uuid": "6c38b8ef-b182-46cb-877d-22919ae7e8f2",
+        "title": "API Comparator for mass data",
         "fullFile": "/Users/fathirwafda/project/interview/allofresh/api-comparator/tests/apiFileComparator.test.js",
         "file": "/tests/apiFileComparator.test.js",
         "beforeHooks": [],
@@ -111,9 +111,9 @@
         "tests": [
           {
             "title": "should compare responses correctly",
-            "fullTitle": "Comparator Library should compare responses correctly",
+            "fullTitle": "API Comparator for mass data should compare responses correctly",
             "timedOut": false,
-            "duration": 4568,
+            "duration": 2770,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -122,13 +122,13 @@
             "code": "const comparator = new Comparator('data-files/file1.txt', 'data-files/file2.txt');\nconst results = await comparator.compare();\nresults.forEach(result => {\n    console.log(`${result.url1} ${result.equal ? 'equals' : 'not equals'} ${result.url2}`);\n});\nexpect(results).to.be.an('array');",
             "err": {},
             "isRoot": false,
-            "uuid": "f67b0447-bb29-448a-9fc1-dcf118fdb2ef",
+            "uuid": "f7a8d34f-7884-46af-9b88-565d2bfbe3f3",
             "isHook": false,
             "skipped": false
           },
           {
             "title": "should not crash with empty files",
-            "fullTitle": "Comparator Library should not crash with empty files",
+            "fullTitle": "API Comparator for mass data should not crash with empty files",
             "timedOut": false,
             "duration": 1,
             "state": "passed",
@@ -139,20 +139,20 @@
             "code": "const comparator = new Comparator('data-files/emptyFile1.txt', 'data-files/emptyFile2.txt');\n        const results = await comparator.compare();\n        // If files are empty, the results should be an empty array since there are no URLs to compare\n        expect(results).to.be.an('array').that.is.empty;",
             "err": {},
             "isRoot": false,
-            "uuid": "2430bff3-e767-4eae-b06b-97106cc436cf",
+            "uuid": "762351c3-193f-49c4-9ff9-f7bc303f6add",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "f67b0447-bb29-448a-9fc1-dcf118fdb2ef",
-          "2430bff3-e767-4eae-b06b-97106cc436cf"
+          "f7a8d34f-7884-46af-9b88-565d2bfbe3f3",
+          "762351c3-193f-49c4-9ff9-f7bc303f6add"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 4569,
+        "duration": 2771,
         "root": false,
         "rootEmpty": false,
         "_timeout": 180000

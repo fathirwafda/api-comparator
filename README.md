@@ -81,6 +81,9 @@ Navigate to the project root directory in the terminal and run the following com
 npm run test
 ```
 
+Sample Report
+![alt text](./Report-sample.png)
+
 ### Adding New Tests
 1. Create Test File: Create a new .test.js file under the relevant directory inside the test/api folder.
 2. Write Test: Use Mocha and Chai to write your test cases in the newly created .test.js file.
